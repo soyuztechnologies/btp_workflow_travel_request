@@ -1,0 +1,18 @@
+{
+	"id": "approverlist",
+	"name": "ApproverList",
+	"type": "STATIC",
+	"items": [{
+		"value": "LocalManager",
+		"displayValue": "Immediate Manager"
+	}, {
+		"value": "DepartmentHead",
+		"displayValue": "Department Head"
+	}, {
+		"value": "TravelController",
+		"displayValue": "Travel Department Head"
+	}, {
+		"value": "CEO",
+		"displayValue": "CEO"
+	}]
+}

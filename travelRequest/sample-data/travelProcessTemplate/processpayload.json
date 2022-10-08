@@ -1,0 +1,17 @@
+{
+    "requestDescription":"LocalManager",
+    "travelId": 0,
+    "countryFrom": "IN",
+    "countryTo": "US",
+    "distance": "6000",
+    "carbonEmission": "920",
+    "cost": "12000",
+    "currency": "EUR",
+    "traveller": {
+        "passport": "U7909085",
+        "name":"Anurag",
+        "country": "India",
+        "age": "28",
+        "gender": "M"
+    }
+  }

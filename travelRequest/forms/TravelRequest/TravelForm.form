@@ -1,0 +1,143 @@
+{
+    "id": "travelform",
+    "schemaVersion": "1.1.0",
+    "name": "TravelForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "travel_request",
+            "type": "section",
+            "title": "Travel Request",
+            "content": [
+                {
+                    "id": "travel_details",
+                    "type": "subsection",
+                    "title": "Travel Details",
+                    "content": [
+                        {
+                            "id": "travelid",
+                            "type": "integer",
+                            "label": "TravelId",
+                            "readOnly": false,
+                            "value": "${context.travelId}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "country_from",
+                            "type": "string",
+                            "label": "Country From",
+                            "readOnly": false,
+                            "value": "${context.countryFrom}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "country_to",
+                            "type": "string",
+                            "label": "Country To",
+                            "readOnly": false,
+                            "value": "${context.countryTo}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "distance",
+                            "type": "string",
+                            "label": "Distance",
+                            "readOnly": false,
+                            "value": "${context.distance}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "carbon_emission",
+                            "type": "string",
+                            "label": "Carbon Emission",
+                            "readOnly": false,
+                            "value": "${context.carbonEmission}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "cost",
+                            "type": "string",
+                            "label": "Cost",
+                            "readOnly": false,
+                            "value": "${context.cost}",
+                            "constraints": {
+                                "required": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "passenger_details",
+                    "type": "subsection",
+                    "title": "Passenger Details",
+                    "content": [
+                        {
+                            "id": "passport",
+                            "type": "string",
+                            "label": "Passport",
+                            "readOnly": false,
+                            "value": "${context.traveller.passport}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "label": "Name",
+                            "readOnly": false,
+                            "value": "${context.traveller.name}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "country",
+                            "type": "string",
+                            "label": "Country",
+                            "readOnly": false,
+                            "value": "${context.traveller.country}",
+                            "constraints": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "id": "age",
+                            "type": "string",
+                            "label": "Age",
+                            "readOnly": false,
+                            "value": "${context.traveller.age}",
+                            "constraints": {
+                                "required": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

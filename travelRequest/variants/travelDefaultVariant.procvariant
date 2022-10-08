@@ -1,0 +1,127 @@
+{
+	"contents": {
+		"53a134bf-41c6-407f-b8cb-d529813217e6": {
+			"classDefinition": "com.sap.bpm.process.Model",
+			"id": "travelprocesstemplate.traveldefaultvariant",
+			"template": {
+				"id": "travelprocesstemplate"
+			},
+			"type": "PREDEFINED",
+			"businessKey": "",
+			"subject": "travelDefaultVariant",
+			"name": "travelDefaultVariant",
+			"documentation": "travelDefaultVariant",
+			"lastIds": "65bea2a0-2e5a-4965-8e47-8019d9063062",
+			"events": {
+				"4212dc83-3d41-4210-b4b2-8e06879d4437": {
+					"name": "StartEvent"
+				},
+				"0f4987cd-2522-4c55-84bf-920a04b87c71": {
+					"name": "EndEvent"
+				}
+			},
+			"activities": {
+				"eee65636-e927-42e7-a93b-a434522159c7": {
+					"name": "TravelRequest"
+				}
+			},
+			"sequenceFlows": {
+				"a0548912-f88b-4999-ad87-6b1cdaf70b43": {
+					"name": "SequenceFlow1"
+				},
+				"b3b20514-f42b-42fe-b1b1-499de1506872": {
+					"name": "SequenceFlow2"
+				}
+			},
+			"diagrams": {
+				"5511253e-d812-438a-b2e5-4616ab6a3341": {}
+			}
+		},
+		"4212dc83-3d41-4210-b4b2-8e06879d4437": {
+			"classDefinition": "com.sap.bpm.process.StartEvent",
+			"id": "startevent1",
+			"name": "StartEvent"
+		},
+		"0f4987cd-2522-4c55-84bf-920a04b87c71": {
+			"classDefinition": "com.sap.bpm.process.EndEvent",
+			"id": "endevent1",
+			"name": "EndEvent"
+		},
+		"a0548912-f88b-4999-ad87-6b1cdaf70b43": {
+			"classDefinition": "com.sap.bpm.process.SequenceFlow",
+			"id": "sequenceflow1",
+			"name": "SequenceFlow1",
+			"sourceRef": "4212dc83-3d41-4210-b4b2-8e06879d4437",
+			"targetRef": "eee65636-e927-42e7-a93b-a434522159c7"
+		},
+		"5511253e-d812-438a-b2e5-4616ab6a3341": {
+			"classDefinition": "com.sap.bpm.process.ui.Diagram",
+			"symbols": {
+				"a8610149-4683-40fe-8a50-f6d2810f5459": {},
+				"95ba01c6-4420-4ce7-a74a-8a61cbd34a61": {},
+				"b1f3bb5d-c209-4d4f-b13c-88e75a263607": {},
+				"bd9f6660-68c5-420f-9e99-6a10e17b5d85": {},
+				"21546f95-12dd-45d9-aa98-5e87198073a6": {}
+			}
+		},
+		"a8610149-4683-40fe-8a50-f6d2810f5459": {
+			"classDefinition": "com.sap.bpm.process.ui.StartEventSymbol",
+			"x": 146,
+			"y": 12,
+			"width": 32,
+			"height": 32,
+			"object": "4212dc83-3d41-4210-b4b2-8e06879d4437"
+		},
+		"95ba01c6-4420-4ce7-a74a-8a61cbd34a61": {
+			"classDefinition": "com.sap.bpm.process.ui.EndEventSymbol",
+			"x": 146,
+			"y": 204,
+			"width": 32,
+			"height": 32,
+			"object": "0f4987cd-2522-4c55-84bf-920a04b87c71"
+		},
+		"b1f3bb5d-c209-4d4f-b13c-88e75a263607": {
+			"classDefinition": "com.sap.bpm.process.ui.SequenceFlowSymbol",
+			"points": "162,44 162,94",
+			"sourceSymbol": "a8610149-4683-40fe-8a50-f6d2810f5459",
+			"targetSymbol": "bd9f6660-68c5-420f-9e99-6a10e17b5d85",
+			"object": "a0548912-f88b-4999-ad87-6b1cdaf70b43"
+		},
+		"65bea2a0-2e5a-4965-8e47-8019d9063062": {
+			"classDefinition": "com.sap.bpm.process.LastIDs",
+			"sequenceflow": 3,
+			"startevent": 1,
+			"endevent": 1,
+			"activity": 2
+		},
+		"eee65636-e927-42e7-a93b-a434522159c7": {
+			"classDefinition": "com.sap.bpm.process.Activity",
+			"stepTypeId": "anubhav.travel.travelrequest",
+			"id": "activity2",
+			"name": "TravelRequest",
+			"documentation": "Travel Request workflow"
+		},
+		"bd9f6660-68c5-420f-9e99-6a10e17b5d85": {
+			"classDefinition": "com.sap.bpm.process.ui.ActivitySymbol",
+			"x": 12,
+			"y": 94,
+			"width": 300,
+			"height": 60,
+			"object": "eee65636-e927-42e7-a93b-a434522159c7"
+		},
+		"b3b20514-f42b-42fe-b1b1-499de1506872": {
+			"classDefinition": "com.sap.bpm.process.SequenceFlow",
+			"id": "sequenceflow3",
+			"name": "SequenceFlow2",
+			"sourceRef": "eee65636-e927-42e7-a93b-a434522159c7",
+			"targetRef": "0f4987cd-2522-4c55-84bf-920a04b87c71"
+		},
+		"21546f95-12dd-45d9-aa98-5e87198073a6": {
+			"classDefinition": "com.sap.bpm.process.ui.SequenceFlowSymbol",
+			"points": "162,154 162,204",
+			"sourceSymbol": "bd9f6660-68c5-420f-9e99-6a10e17b5d85",
+			"targetSymbol": "95ba01c6-4420-4ce7-a74a-8a61cbd34a61",
+			"object": "b3b20514-f42b-42fe-b1b1-499de1506872"
+		}
+	}
+}

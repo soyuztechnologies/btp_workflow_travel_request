@@ -1,0 +1,67 @@
+{
+	"id": "travelprocesstemplate",
+	"name": "travelProcessTemplate",
+	"documentation": "travelProcessTemplate",
+	"contentVersion": "2.0",
+	"stepDefinitions": [{
+		"id": "com.sap.bpm.process.start",
+		"name": "Start"
+	}, {
+		"reference": "/workflows/TravelRequest.workflow",
+		"icon": "sap-icon://flight",
+		"borderColor": "#d58215",
+		"constraints": {
+			"occurrence": {
+				"min": 1,
+				"max": 6
+			}
+		},
+		"inputParameters": [{
+			"id": "approver",
+			"name": "approver",
+			"documentation": "Approver",
+			"type": "string",
+			"predefinedValue": "LocalManager",
+			"targetVariable": "${context.requestDescription}",
+			"valueHelp": {
+				"references": ["/valueHelp/ApproverList.json"]
+			}
+		}],
+		"outcomes": [{
+			"id": "Response",
+			"name": "Response",
+			"documentation": ""
+		}]
+	}, {
+		"id": "com.sap.bpm.process.end",
+		"name": "End"
+	}],
+	"configurations": {
+		"enablePrincipalPropagation": true
+	},
+	"contextMapping": {
+		"inputContextMapping": [{
+			"sourceExpression": "${context.count}"
+		}]
+	},
+	"attributes": [{
+		"id": "carbonEmission",
+		"label": "carbonEmission",
+		"type": "string",
+		"value": "${context.carbonEmission}"
+	}, {
+		"id": "TravelCost",
+		"label": "Travel Cost",
+		"type": "string",
+		"value": "${context.cost}"
+	}, {
+		"id": "DistanceTravelled",
+		"label": "Distance",
+		"type": "string",
+		"value": "${context.distance}"
+	}],
+	"sampleContexts": [{
+		"id": "processpayload",
+		"reference": "/sample-data/travelProcessTemplate/processpayload.json"
+	}]
+}
